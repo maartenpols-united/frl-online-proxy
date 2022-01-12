@@ -30,7 +30,7 @@ switch ($cmd) {
             echo "Config file required";
             exit 1;
         }
-        ./bin/nssm install $serviceName "$PSScriptRoot\frl-proxy.exe" "--config-file $cfg start";
+        ./bin/nssm install $serviceName "$PSScriptRoot\frl-proxy.exe" "--config-file `"`"$cfg`"`" start";
         ./bin/nssm start $serviceName;
     }
     stop {
